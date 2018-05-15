@@ -1,11 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
 //########################################
 
 //to process data sent in on request need body-parser module
@@ -27,6 +22,3 @@ router.post('/readNameAndRespond', function(req, res, next) {
     var value_name = req.body.name;  //retrieve the data associated with name
     res.send("hello " + value_name);
 });
-
-
-module.exports = router;
